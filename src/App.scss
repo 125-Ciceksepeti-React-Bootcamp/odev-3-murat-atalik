@@ -1,0 +1,25 @@
+.App {
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.alert {
+  background-color: #fed34d;
+  width: 25%;
+  position: fixed;
+  padding: 1rem;
+  border-radius: 1rem;
+  bottom: 1rem;
+  right: 1rem;
+  text-align: center;
+  color: rgb(18, 13, 27);
+  font-size: 16px;
+}

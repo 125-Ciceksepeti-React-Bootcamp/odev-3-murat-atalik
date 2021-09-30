@@ -1,0 +1,66 @@
+.header {
+  background: #000;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.logo {
+  width: 128px;
+
+  p {
+    background-color: #fed34d;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 900;
+    border-radius: 1rem;
+    margin-left: 1rem;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+.avatar {
+  width: 64px;
+  img {
+    margin: auto;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+.search-bar {
+  width: 60%;
+  position: relative;
+  .search-input {
+    padding: 0.7rem;
+    padding-left: 40px;
+    border-radius: 1rem;
+    width: 100%;
+    &:focus {
+      outline: 0;
+    }
+  }
+  .search-icon {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+  }
+}
+.nightmode-toggle {
+  fill: #fed34d;
+}
+.nightmode-toggle :hover {
+  fill: rgba(59, 59, 59, 0.8);
+}
+
+@media screen and (max-width: 500px) {
+  .avatar,
+  .logo {
+    display: none;
+  }
+  .search-bar {
+    margin-left: 10%;
+  }
+}

@@ -1,0 +1,128 @@
+.modal {
+  width: 100%;
+  height: 100%;
+
+  .modal-inner {
+    background: rgb(45, 38, 149);
+    background: linear-gradient(
+      45deg,
+      rgba(45, 38, 149, 1) 0%,
+      rgba(0, 0, 0, 1) 48%,
+      rgba(0, 0, 0, 1) 93%,
+      rgba(0, 212, 255, 1) 100%
+    );
+    border-radius: 1rem;
+    position: fixed;
+    width: 80%;
+    height: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .modal-body {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 4rem;
+    .modal-info {
+      display: flex;
+      flex-direction: column;
+      margin-right: 4rem;
+      margin-left: 4rem;
+    }
+    .modal-image {
+      margin-right: 4rem;
+    }
+  }
+}
+button {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bolder;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}
+.modal-popularity {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  height: 60px;
+}
+.modal-director,
+.modal-name,
+.modal-teaserurl,
+.modal-imageurl {
+  font-size: 24px;
+  font-weight: bolder;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.modal-input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: #fed34d;
+  height: 60px;
+  font-size: 24px;
+  font-weight: bolder;
+  width: 40rem;
+}
+.input-label {
+  margin-right: 1rem;
+  font-size: 24px;
+  color: #fed34d;
+  font-size: 24px;
+  font-weight: bolder;
+  width: 10rem;
+}
+.modal-button {
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #fed34d;
+  position: fixed;
+  top: 90%;
+  right: 3rem;
+  &:hover {
+    background-color: green;
+    transform: scale(1.1);
+  }
+}
+
+.modal-closebtn {
+  *:hover {
+    transform: scale(1.1);
+    fill: red;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .modal-image {
+    display: none;
+  }
+  .modal-input {
+    width: 100%;
+  }
+  .modal-info {
+    width: 100%;
+  }
+  .modal-popularity {
+    flex-direction: column;
+    .popularity-star {
+      margin-top: 10px;
+    }
+  }
+  .input-label {
+    width: 100%;
+  }
+}
+@media screen and (max-height: 850px) {
+  iframe {
+    display: none;
+  }
+}
