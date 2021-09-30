@@ -17,9 +17,17 @@
   .card-title {
     margin: 10px 5px 5px 5px;
   }
+
   &:hover {
     transform: scale(1.1);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+    .card-star {
+      display: flex;
+      flex-direction: column;
+    }
+    .delete-icon {
+      display: inline;
+    }
   }
   .card-image {
     position: relative;
@@ -28,16 +36,6 @@
       border-top-right-radius: 1rem;
       width: 100%;
       height: 100%;
-    }
-
-    &:hover {
-      .card-star {
-        display: flex;
-        flex-direction: column;
-      }
-      .delete-icon {
-        display: inline;
-      }
     }
   }
 }
