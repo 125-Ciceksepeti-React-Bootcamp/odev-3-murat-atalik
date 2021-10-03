@@ -14,6 +14,7 @@ import CardModal from '../card-modal/CardModal';
 export default function Card(props) {
   const [responseData, setResponseData] = useState([]);
   const [modalData, setModalData] = useState({});
+  const [showModal, setShowModal] = useState(false);
   useEffect(() => {
     setResponseData(props.data);
   }, [props.data]);
@@ -23,14 +24,13 @@ export default function Card(props) {
     props.deleteCard(id);
   };
   //Open modal and pass data
-  const showModal = (data) => {
-    const showModal = { show: true, modalData: data };
-    setModalData(showModal);
+  const openModal = (data) => {
+    setModalData(data);
+    setShowModal(true);
   };
   //close modal and clear datat
   const closeModal = () => {
-    const showModal = { show: false, modalData: {} };
-    setModalData(showModal);
+    setShowModal(false);
   };
   // change popularity star
   const handleStar = (id, star) => {
@@ -51,7 +51,7 @@ export default function Card(props) {
               </button>
 
               <img
-                onClick={() => showModal(data)}
+                onClick={() => openModal(data)}
                 src={data.imageUrl}
                 alt={'album'}
               />
@@ -69,10 +69,11 @@ export default function Card(props) {
         <CardModal
           handleDelete={handleDelete}
           handleEdit={props.handleEdit}
-          modal={modalData}
+          modalData={modalData}
           alert={props.alert}
           closeModal={closeModal}
           theme={props.theme}
+          showModal={showModal}
         />
       </div>
     )
